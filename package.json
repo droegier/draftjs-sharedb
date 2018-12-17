@@ -1,0 +1,51 @@
+{
+  "name": "sharedb-draftjs-prototype",
+  "version": "0.0.1",
+  "description": "ShareDB <3 DraftJS",
+  "main": "server.js",
+  "scripts": {
+    "build": "mkdir -p dist/ && ./node_modules/.bin/browserify -t [ babelify --presets [ react ] ] client/index.jsx -o dist/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run-script build && node server/index.js"
+  },
+  "contributors": [
+    "Tom Coleman <tom@percolatestudio.com> (https://tom.thesnail.org/)",
+    "Avital Oliver <avital@aoliver.org> (https://aoliver.org/)",
+    "David Roegiers",
+    "Felix Gast"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "connect": "^3.4.1",
+    "deep-diff": "^1.0.1",
+    "draft-js": "^0.10.5",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "json-diff": "^0.5.2",
+    "json0-ot-diff": "^1.0.3",
+    "jsondiffpatch": "^0.3.11",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mongodb": "^3.1.1",
+    "pryjs": "^1.0.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router-dom": "^4.3.1",
+    "reconnecting-websocket": "^4.0.0-rc5",
+    "serve-static": "^1.11.1",
+    "sharedb": "^1.0.0-beta",
+    "sharedb-mingo-memory": "^1.0.0-beta",
+    "sharedb-mongo": "^1.0.0-beta.4",
+    "through2": "^2.0.1",
+    "underscore": "^1.8.3",
+    "url": "^0.11.0",
+    "websocket-json-stream": "^0.0.3",
+    "ws": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  }
+}
